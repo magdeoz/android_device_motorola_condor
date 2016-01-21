@@ -3,7 +3,7 @@
 ##Building:
 ````
 source build/envsetup.sh
-lunch omni_otus-userdebug
+lunch omni_condor-userdebug
 make clean
 make installclean
 make -j10 recoveryimage
