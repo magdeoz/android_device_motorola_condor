@@ -1,4 +1,4 @@
-#Magdeoz TWRP multirom tree for Moto E (2014)
+#Magdeoz TWRP tree for Moto E (2014)
 
 ##Building:
 ````
