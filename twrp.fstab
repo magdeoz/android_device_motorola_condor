@@ -3,6 +3,6 @@
 /cache        ext4          /dev/block/platform/msm_sdcc.1/by-name/cache
 /boot         emmc          /dev/block/platform/msm_sdcc.1/by-name/boot
 /recovery     emmc          /dev/block/platform/msm_sdcc.1/by-name/recovery
-/persist      ext4          /dev/block/platform/msm_sdcc.1/by-name/persist    flags=fsflags=ro,nosuid,nodev,barrier=0;mounttodecrypt
-/firmware     ext4          /dev/block/platform/msm_sdcc.1/by-name/modem      flags=fsflags=ro,nosuid,nodev,barrier=0;mounttodecrypt
+
 /external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1          flags=display="MicroSD Card";storage;wipeingui;removable
+/sd-ext       auto          /dev/block/mmcblk1p2                         flags=display="SD-Ext";wipeingui;removable
