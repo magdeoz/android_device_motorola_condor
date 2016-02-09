@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "sultanqasim/android_kernel_motorola_otus",
+    "repository":  "magdeoz/android_kernel_motorola_condor",
     "target_path": "kernel/motorola/msm8610",
     "revision":    "twrp"
   }
