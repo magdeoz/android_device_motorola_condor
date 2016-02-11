@@ -38,12 +38,12 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 TARGET_PREBUILT_KERNEL := device/motorola/condor/kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom vmalloc=400M androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/motorola/condor/dt.img
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 
-# Test
+# NO NEED PREBUILT
 #TARGET_KERNEL_SOURCE := kernel/motorola/msm8610
 #TARGET_KERNEL_CONFIG := msm8610-mini_defconfig
 #BOARD_RAMDISK_OFFSET := 0x01000000
@@ -76,10 +76,11 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # TWRP
 DEVICE_RESOLUTION := 540x960
 # TW_TARGET_USES_QCOM_BSP := true
+TW_EXCLUDE_SUPERSU := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INCLUDE_CRYPTO := true
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_INCLUDE_NTFS_3G := true
 TW_IGNORE_MAJOR_AXIS_0 := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"

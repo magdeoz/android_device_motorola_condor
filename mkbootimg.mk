@@ -2,6 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 PREBUILT_DTIMAGE_TARGET := $(LOCAL_PATH)/dt.img
 LZMA_RAMDISK := $(PRODUCT_OUT)/ramdisk-recovery-lzma.img
+LZMA_BIN := $(shell which lzma)
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(PREBUILT_DTIMAGE_TARGET)
 	$(call pretty,"Target boot image: $@")
@@ -10,7 +11,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(PREBUI
 	@echo -e ${CL_CYN}"Made boot image: $@"${CL_RST}
 
 $(LZMA_RAMDISK): $(recovery_ramdisk)
-	gunzip -f < $(recovery_ramdisk) | lzma > $@
+	$(hide) gunzip -f < $(recovery_ramdisk) | $(LZMA_BIN) > $@
 
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(PREBUILT_DTIMAGE_TARGET) \
 		$(LZMA_RAMDISK) \
