@@ -20,9 +20,10 @@ const char *mr_init_devices[] =
     "/sys/module/mmc_core",
     "/sys/module/mmcblk",
 
+    // input
     "/sys/devices/gpio_keys.75/input*",
-    "/sys/class/input/event4", //touch
     "/sys/devices/virtual/input*",
+    "/sys/devices/f9923000.i2c/i2c-1/1-0020/input*",
     "/sys/devices/virtual/misc/uinput",
 
     // for adb
