@@ -97,7 +97,6 @@ COMMON_GLOBAL_CFLAGS += -DTW_NO_SCREEN_TIMEOUT
 # MultiROM
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/motorola/condor/mr_init_devices.c
-MR_DEVICE_HOOKS := device/motorola/condor/mr_hooks.c
 MR_DPI := hdpi
 MR_DPI_FONT := 160
 MR_KEXEC_MEM_MIN := 0x05000000
